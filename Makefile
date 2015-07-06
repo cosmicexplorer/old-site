@@ -1,4 +1,4 @@
-.PHONY: all clean
+.PHONY: all rebuild clean distclean sweep
 
 THIS_MAKEFILE_PATH := $(abspath $(lastword $(MAKEFILE_LIST)))
 CURRENT_DIR := $(notdir $(patsubst %/,%,$(dir $(mkfile_path))))
@@ -10,10 +10,9 @@ SUBMODULE_PROOFS := $(CREATOR_DIR)/Makefile
 
 all: $(SUBMODULE_PROOFS)
 	$(MAKE) -C $(CREATOR_DIR) rebuild
+	$(MAKE) sweep
 
 rebuild:
-	@git submodule deinit -f .
-	@git submodule update --init --recursive
 	@cp site.config $(CREATOR_DIR)
 	$(MAKE) all
 
@@ -22,3 +21,9 @@ $(SUBMODULE_PROOFS):
 
 clean: $(SUBMODULE_PROOFS)
 	$(MAKE) -C $(CREATOR_DIR) clean
+
+distclean: clean
+	@git submodule deinit -f .
+
+sweep:
+	$(MAKE) -C $(CREATOR_DIR) sweep

@@ -1,6 +1,0 @@
-/* %% This file was generated from test.c %% */
-#include <stdio.h>
-
-int main() {
-  printf("%s\n", "hello world!");
-}

@@ -1,4 +1,11 @@
 #+TITLE: Site Map
 
+   + org-site-creator
+     + org-info-js
+       + [[file:org-site-creator/org-info-js/index.org][EMACS ORG-INFO.JS]]
+       + [[file:org-site-creator/org-info-js/hacking.org][Hacking org-info.js]]
+       + [[file:org-site-creator/org-info-js/changes.org][ORG-INFO.JS: Changes]]
+       + [[file:org-site-creator/org-info-js/notes.org][TODO]]
+       + [[file:org-site-creator/org-info-js/TODO.org][TODO]]
    + [[file:index.org][index lol]]
    + [[file:setup.org][setup]]
