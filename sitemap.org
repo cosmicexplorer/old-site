@@ -1,4 +1,6 @@
 #+TITLE: Site Map
 
+   + lol
+     + [[file:lol/test.org][test]]
    + [[file:index.org][index lol]]
    + [[file:setup.org][setup]]

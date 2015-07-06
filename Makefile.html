@@ -80,11 +80,12 @@
 <span class="variable-name"> SUBMODULE_PROOFS</span> := $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name">CREATOR_DIR</span><span class="rainbow-delimiters-depth-1">)</span>/Makefile
 
 <span class="makefile-targets"> all</span>: $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name">SUBMODULE_PROOFS</span><span class="rainbow-delimiters-depth-1">)</span>
-        $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name">MAKE</span><span class="rainbow-delimiters-depth-1">)</span> -C $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name">CREATOR_DIR</span><span class="rainbow-delimiters-depth-1">)</span> rebuild
+        $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name">MAKE</span><span class="rainbow-delimiters-depth-1">)</span> -C $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name">CREATOR_DIR</span><span class="rainbow-delimiters-depth-1">)</span> all
         $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name">MAKE</span><span class="rainbow-delimiters-depth-1">)</span> sweep
 
 <span class="makefile-targets"> rebuild</span>:
         <span class="type">@</span><span class="makefile-shell">cp site.config $</span><span class="rainbow-delimiters-depth-1"><span class="makefile-shell">(</span></span><span class="makefile-shell"><span class="variable-name">CREATOR_DIR</span></span><span class="rainbow-delimiters-depth-1"><span class="makefile-shell">)</span></span>
+        $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name">MAKE</span><span class="rainbow-delimiters-depth-1">)</span> -C $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name">CREATOR_DIR</span><span class="rainbow-delimiters-depth-1">)</span> clean
         $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name">MAKE</span><span class="rainbow-delimiters-depth-1">)</span> all
 
 <span class="makefile-targets"> $</span><span class="rainbow-delimiters-depth-1"><span class="makefile-targets">(</span></span><span class="variable-name"><span class="makefile-targets">SUBMODULE_PROOFS</span></span><span class="rainbow-delimiters-depth-1"><span class="makefile-targets">)</span></span>:

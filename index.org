@@ -2,6 +2,7 @@
 #+TITLE: index lol
 #+AUTHOR: Danny McClanahan
 #+EMAIL: (format "%s@%s.com" "danieldmcclanahan" "gmail")
+#+SETUPFILE: setup.org
 
 * hey
 lol hey
