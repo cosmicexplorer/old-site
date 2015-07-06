@@ -1,0 +1,4 @@
+#+TITLE: Site Map
+
+   + [[file:index.org][index lol]]
+   + [[file:setup.org][setup]]
