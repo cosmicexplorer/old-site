@@ -1,4 +1,0 @@
-[submodule "org-site-creator"]
-	path = org-site-creator
-	url = https://github.com/cosmicexplorer/org-site-creator
-        ignore = dirty
