@@ -2,5 +2,40 @@
 
    + lol
      + [[file:lol/test.org][test]]
+   + org-site-creator
+     + org-mode
+       + contrib
+         + scripts
+           + staticmathjax
+             + [[file:org-site-creator/org-mode/contrib/scripts/staticmathjax/README.org][README]]
+           + [[file:org-site-creator/org-mode/contrib/scripts/org-docco.org][Org-Docco]]
+       + doc
+         + [[file:org-site-creator/org-mode/doc/Documentation_Standards.org][Notes on documenting Org]]
+         + [[file:org-site-creator/org-mode/doc/library-of-babel.org][The Library of Babel]]
+       + testing
+         + examples
+           + [[file:org-site-creator/org-mode/testing/examples/normal.org][Example file]]
+           + [[file:org-site-creator/org-mode/testing/examples/macro-templates.org][Macro templates]]
+           + [[file:org-site-creator/org-mode/testing/examples/links.org][Testing various links types]]
+           + [[file:org-site-creator/org-mode/testing/examples/ob-header-arg-defaults.org][Tests for default header arguments to Babel source blocks]]
+           + [[file:org-site-creator/org-mode/testing/examples/babel.org][a collection of examples for Babel tests]]
+           + [[file:org-site-creator/org-mode/testing/examples/org-exp.org][a collection of examples for export tests]]
+           + [[file:org-site-creator/org-mode/testing/examples/ob-C-test.org][a collection of examples for ob-C tests]]
+           + [[file:org-site-creator/org-mode/testing/examples/ob-awk-test.org][a collection of examples for ob-awk tests]]
+           + [[file:org-site-creator/org-mode/testing/examples/ob-fortran-test.org][a collection of examples for ob-fortran tests]]
+           + [[file:org-site-creator/org-mode/testing/examples/ob-maxima-test.org][a collection of examples for ob-maxima tests]]
+           + [[file:org-site-creator/org-mode/testing/examples/ob-octave-test.org][a collection of examples for ob-octave tests]]
+           + [[file:org-site-creator/org-mode/testing/examples/ob-screen-test.org][a collection of examples for ob-screen tests]]
+           + [[file:org-site-creator/org-mode/testing/examples/ob-sed-test.org][a collection of examples for ob-sed tests]]
+           + [[file:org-site-creator/org-mode/testing/examples/ob-shell-test.org][a collection of examples for ob-shell tests]]
+           + [[file:org-site-creator/org-mode/testing/examples/setupfile.org][b]]
+           + [[file:org-site-creator/org-mode/testing/examples/babel-dangerous.org][dangerous code block examples which should be isolated]]
+           + [[file:org-site-creator/org-mode/testing/examples/include.org][include]]
+           + [[file:org-site-creator/org-mode/testing/examples/include2.org][include2]]
+           + [[file:org-site-creator/org-mode/testing/examples/link-in-heading.org][link-in-heading]]
+           + [[file:org-site-creator/org-mode/testing/examples/no-heading.org][no-heading]]
+           + [[file:org-site-creator/org-mode/testing/examples/ob-lilypond-broken.org][ob-lilypond-broken]]
+           + [[file:org-site-creator/org-mode/testing/examples/ob-lilypond-test.org][ob-lilypond-test]]
+           + [[file:org-site-creator/org-mode/testing/examples/property-inheritance.org][property-inheritance]]
    + [[file:index.org][index lol]]
    + [[file:set_stuff.org][set_stuff]]
