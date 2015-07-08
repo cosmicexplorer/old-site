@@ -2,22 +2,51 @@
 #+TITLE: index lol
 #+AUTHOR: Danny McClanahan
 #+EMAIL: (format "%s@%s.com" "danieldmcclanahan" "gmail")
-#+SETUPFILE: setup.org
 
 * hey
 lol hey
 
-Here's some code from [[file:test.c]]:
+Here's some code that's not from [[file:test.c]]:
 #+BEGIN_SRC javascript
 console.log("hello world!");
+
+var a = 3; // set a to 3
+
+var f = function(){
+  this.x = a;
+}
+
+var g = new f;
 #+END_SRC
 
 Truly amazing.
 
-** more stuff
+** more stuff :test:
 a
 http://google.com
 ** stuff
 b
+
+* DONE for everything [5/5]                                             :yay:
+1. [X] add href for toc links
+2. [X] add links for tags
+3. [X] add href for headings, everywhere
+4. [X] make 'U' at a top-level section go to TOC
+5. [X] add highlighting for native org and remove dependency on highlightjs
+
 * a
 a
+
+also hey why not [[file:lol/test.org]]
+
+#+BEGIN_SRC c
+#include <stdio.h>
+
+int main(int argc, char ** argv){
+  printf("%s\n", "hello world!");
+}
+#+END_SRC
+
+** more
+
+Let's go to [[hey]]

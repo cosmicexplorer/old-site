@@ -9,7 +9,7 @@ SUBMODULES := $(CREATOR_DIR)
 SUBMODULE_PROOFS := $(CREATOR_DIR)/Makefile
 
 all: $(SUBMODULE_PROOFS)
-	$(MAKE) -C $(CREATOR_DIR) all
+	$(MAKE) -C $(CREATOR_DIR) rebuild
 	$(MAKE) sweep
 
 rebuild:
