@@ -1,4 +1,5 @@
 #+INFOJS_OPTS: home:../sitemap.html
+#+SETUPFILE: ../set_stuff.org
 
 asdf
 
