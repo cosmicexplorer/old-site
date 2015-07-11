@@ -32,4 +32,4 @@ I'm Danny McClanahan. I [[https://github.com/cosmicexplorer][write code]] and [[
 
 I often find that writing about things is harder for me to do than to actually do them, so this is an attempt to combat that. To search through posts, you can either [[https://github.com/cosmicexplorer/cosmicexplorer.github.io][clone this repo]] or press the =o= key to run occur mode.
 
-** initial reaction <2015-07-11 Sat>
+** initial reaction
