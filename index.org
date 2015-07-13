@@ -1,5 +1,5 @@
 #+STARTUP: showeverything
-#+TITLE: index lol
+#+TITLE: passion paradise
 #+AUTHOR: Danny McClanahan
 #+EMAIL: (format "%s@%s.com" "danieldmcclanahan" "gmail")
 
