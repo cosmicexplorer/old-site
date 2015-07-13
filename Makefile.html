@@ -23,8 +23,6 @@
         /* font-lock-function-name-face */
         color: #87cefa;
       }
-      .makefile-shell {
-      }
       .makefile-targets {
         /* makefile-targets */
         color: #87cefa;
@@ -44,10 +42,6 @@
       .rainbow-delimiters-depth-4 {
         /* rainbow-delimiters-depth-4-face */
         color: #97b098;
-      }
-      .type {
-        /* font-lock-type-face */
-        color: #98fb98;
       }
       .variable-name {
         /* font-lock-variable-name-face */
@@ -73,40 +67,30 @@
   </head>
   <body>
     <pre><code>
-<span class="comment-delimiter"> # </span><span class="comment">%% This file was generated from <a href="https://github.com/cosmicexplorer/cosmicexplorer.github.io/blob/master/Makefile">Makefile</a> %%
-</span><span class="makefile-targets">.PHONY</span>: all rebuild clean distclean sweep html_<span class="warning">only</span>
+<span class="comment-delimiter"> # </span><span class="comment">%% This file was generated from <a href="https://github.com/cosmicexplorer/cosmicexplorer.github.io/blob/master/Makefile">Makefile</a> %% .PHONY: all rebuild clean
+</span>distclean sweep html_<span class="warning">only</span>
 
-<span class="variable-name"> THIS_MAKEFILE_PATH</span> := $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name"><span class="function-name">abspath</span></span><span class="function-name"> </span>$<span class="rainbow-delimiters-depth-2">(</span><span class="variable-name">lastword</span> $<span class="rainbow-delimiters-depth-3">(</span><span class="variable-name">MAKEFILE_LIST</span><span class="rainbow-delimiters-depth-3">)</span><span class="rainbow-delimiters-depth-2">)</span><span class="rainbow-delimiters-depth-1">)</span>
-<span class="variable-name"> CURRENT_DIR</span> := $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name"><span class="function-name">notdir</span></span><span class="function-name"> </span>$<span class="rainbow-delimiters-depth-2">(</span><span class="variable-name">patsubst</span> %/,%,$<span class="rainbow-delimiters-depth-3">(</span><span class="variable-name"><span class="function-name">dir</span></span><span class="function-name"> </span>$<span class="rainbow-delimiters-depth-4">(</span><span class="variable-name">mkfile_path</span><span class="rainbow-delimiters-depth-4">)</span><span class="rainbow-delimiters-depth-3">)</span><span class="rainbow-delimiters-depth-2">)</span><span class="rainbow-delimiters-depth-1">)</span>
+<span class="variable-name"> THIS_MAKEFILE_PATH</span> := $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name"><span class="function-name">abspath</span></span><span class="function-name"> </span>$<span class="rainbow-delimiters-depth-2">(</span><span class="variable-name">lastword</span> $<span class="rainbow-delimiters-depth-3">(</span><span class="variable-name">MAKEFILE_LIST</span><span class="rainbow-delimiters-depth-3">)</span><span class="rainbow-delimiters-depth-2">)</span><span class="rainbow-delimiters-depth-1">)</span>  CURRENT_DIR :=
+$<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name"><span class="function-name">notdir</span></span><span class="function-name"> </span>$<span class="rainbow-delimiters-depth-2">(</span><span class="variable-name">patsubst</span> %/,%,$<span class="rainbow-delimiters-depth-3">(</span><span class="variable-name"><span class="function-name">dir</span></span><span class="function-name"> </span>$<span class="rainbow-delimiters-depth-4">(</span><span class="variable-name">mkfile_path</span><span class="rainbow-delimiters-depth-4">)</span><span class="rainbow-delimiters-depth-3">)</span><span class="rainbow-delimiters-depth-2">)</span><span class="rainbow-delimiters-depth-1">)</span>
 
 <span class="variable-name"> CREATOR_DIR</span> := org-site-creator
 
-<span class="variable-name"> SUBMODULES</span> := $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name">CREATOR_DIR</span><span class="rainbow-delimiters-depth-1">)</span>
-<span class="variable-name"> SUBMODULE_PROOFS</span> := $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name">CREATOR_DIR</span><span class="rainbow-delimiters-depth-1">)</span>/Makefile
+<span class="variable-name"> SUBMODULES</span> := $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name">CREATOR_DIR</span><span class="rainbow-delimiters-depth-1">)</span>  SUBMODULE_PROOFS := $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name">CREATOR_DIR</span><span class="rainbow-delimiters-depth-1">)</span>/Makefile
 
-<span class="makefile-targets"> all</span>: $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name">SUBMODULE_PROOFS</span><span class="rainbow-delimiters-depth-1">)</span>
-        $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name">MAKE</span><span class="rainbow-delimiters-depth-1">)</span> -C $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name">CREATOR_DIR</span><span class="rainbow-delimiters-depth-1">)</span> rebuild
-        $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name">MAKE</span><span class="rainbow-delimiters-depth-1">)</span> sweep
+<span class="makefile-targets"> all</span>: $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name">SUBMODULE_PROOFS</span><span class="rainbow-delimiters-depth-1">)</span>  $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name">MAKE</span><span class="rainbow-delimiters-depth-1">)</span> -C $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name">CREATOR_DIR</span><span class="rainbow-delimiters-depth-1">)</span> rebuild  $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name">MAKE</span><span class="rainbow-delimiters-depth-1">)</span> sweep
 
-<span class="makefile-targets"> html_</span><span class="warning">only</span>:
-        $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name">MAKE</span><span class="rainbow-delimiters-depth-1">)</span> -C $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name">CREATOR_DIR</span><span class="rainbow-delimiters-depth-1">)</span> html_<span class="warning">only</span>
+<span class="makefile-targets"> html_</span><span class="warning">only</span>:  $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name">MAKE</span><span class="rainbow-delimiters-depth-1">)</span> -C $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name">CREATOR_DIR</span><span class="rainbow-delimiters-depth-1">)</span> html_<span class="warning">only</span>
 
-<span class="makefile-targets"> rebuild</span>:
-        <span class="type">@</span><span class="makefile-shell">cp site.config $</span><span class="rainbow-delimiters-depth-1"><span class="makefile-shell">(</span></span><span class="makefile-shell"><span class="variable-name">CREATOR_DIR</span></span><span class="rainbow-delimiters-depth-1"><span class="makefile-shell">)</span></span>
-        $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name">MAKE</span><span class="rainbow-delimiters-depth-1">)</span> -C $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name">CREATOR_DIR</span><span class="rainbow-delimiters-depth-1">)</span> clean
-        $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name">MAKE</span><span class="rainbow-delimiters-depth-1">)</span> all
+<span class="makefile-targets"> rebuild</span>:  @cp site.config $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name">CREATOR_DIR</span><span class="rainbow-delimiters-depth-1">)</span>  $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name">MAKE</span><span class="rainbow-delimiters-depth-1">)</span> -C $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name">CREATOR_DIR</span><span class="rainbow-delimiters-depth-1">)</span> clean  $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name">MAKE</span><span class="rainbow-delimiters-depth-1">)</span>
+        all
 
-<span class="makefile-targets"> $</span><span class="rainbow-delimiters-depth-1"><span class="makefile-targets">(</span></span><span class="variable-name"><span class="makefile-targets">SUBMODULE_PROOFS</span></span><span class="rainbow-delimiters-depth-1"><span class="makefile-targets">)</span></span>:
-        <span class="type">@</span><span class="makefile-shell">git submodule update --init --recursive</span>
+<span class="makefile-targets"> $</span><span class="rainbow-delimiters-depth-1"><span class="makefile-targets">(</span></span><span class="variable-name"><span class="makefile-targets">SUBMODULE_PROOFS</span></span><span class="rainbow-delimiters-depth-1"><span class="makefile-targets">)</span></span>:  @git submodule update --init --recursive
 
-<span class="makefile-targets"> clean</span>: $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name">SUBMODULE_PROOFS</span><span class="rainbow-delimiters-depth-1">)</span>
-        $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name">MAKE</span><span class="rainbow-delimiters-depth-1">)</span> -C $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name">CREATOR_DIR</span><span class="rainbow-delimiters-depth-1">)</span> clean
+<span class="makefile-targets"> clean</span>: $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name">SUBMODULE_PROOFS</span><span class="rainbow-delimiters-depth-1">)</span> $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name">MAKE</span><span class="rainbow-delimiters-depth-1">)</span> -C $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name">CREATOR_DIR</span><span class="rainbow-delimiters-depth-1">)</span> clean
 
-<span class="makefile-targets">distclean</span>: clean
-        <span class="type">@</span><span class="makefile-shell">git submodule deinit -f .</span>
+<span class="makefile-targets">distclean</span>: clean @git submodule deinit -f .
 
-<span class="makefile-targets">sweep</span>:
-        $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name">MAKE</span><span class="rainbow-delimiters-depth-1">)</span> -C $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name">CREATOR_DIR</span><span class="rainbow-delimiters-depth-1">)</span> sweep
+<span class="makefile-targets">sweep</span>: $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name">MAKE</span><span class="rainbow-delimiters-depth-1">)</span> -C $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name">CREATOR_DIR</span><span class="rainbow-delimiters-depth-1">)</span> sweep
 </code></pre>
   </body>
 </html>
