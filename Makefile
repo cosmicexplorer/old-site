@@ -9,25 +9,23 @@ SUBMODULES := $(CREATOR_DIR)
 SUBMODULE_PROOFS := $(CREATOR_DIR)/Makefile
 
 all: $(SUBMODULE_PROOFS)
+	cp site.config $(CREATOR_DIR)
 	$(MAKE) -C $(CREATOR_DIR) rebuild
-	$(MAKE) sweep
 
 html_only:
 	$(MAKE) -C $(CREATOR_DIR) html_only
 
-rebuild:
-	@cp site.config $(CREATOR_DIR)
-	$(MAKE) -C $(CREATOR_DIR) clean
-	$(MAKE) all
+rebuild: all | clean
 
 $(SUBMODULE_PROOFS):
-	@git submodule update --init --recursive
+	git submodule update --init --recursive
 
-clean: $(SUBMODULE_PROOFS)
+clean:
 	$(MAKE) -C $(CREATOR_DIR) clean
 
 distclean: clean
-	@git submodule deinit -f .
+	git submodule deinit -f .
+	rm -rf $(SUBMODULES)
 
 sweep:
 	$(MAKE) -C $(CREATOR_DIR) sweep

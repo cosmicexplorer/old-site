@@ -1,3 +1,0 @@
-#+TITLE: Site Map
-
-   + [[file:index.org][passion paradist]]
