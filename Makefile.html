@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<!-- Created by htmlize-1.47 in css mode. -->
+<html>
+  <head>
+    <title>Makefile</title>
+    <style type="text/css">
+    <!--
+      body {
+        color: #000000;
+        background-color: #ffffff;
+      }
+      .comment {
+        /* font-lock-comment-face */
+        color: #ffffff;
+        background-color: #8b008b;
+      }
+      .comment-delimiter {
+        /* font-lock-comment-delimiter-face */
+        color: #ffffff;
+        background-color: #8b008b;
+      }
+      .makefile-targets {
+        /* makefile-targets */
+        color: #0000ff;
+        font-weight: bold;
+      }
+      .rainbow-delimiters-depth-1 {
+        /* rainbow-delimiters-depth-1-face */
+        color: #707183;
+      }
+      .variable-name {
+        /* font-lock-variable-name-face */
+        color: #ffff00;
+      }
+      .warning {
+        /* font-lock-warning-face */
+        color: #ff0000;
+        background-color: #ffffff;
+      }
+
+      a {
+        color: inherit;
+        background-color: inherit;
+        font: inherit;
+        text-decoration: inherit;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    -->
+    </style>
+  </head>
+  <body>
+    <pre><code>
+<span class="comment-delimiter"> # </span><span class="comment">%% This file was generated from <a href="Makefile">Makefile</a> %% .PHONY: all rebuild clean
+</span>distclean sweep html_<span class="warning">only</span>
+
+<span class="variable-name"> CREATOR_DIR</span> := org-site-creator
+
+<span class="variable-name"> SUBMODULES</span> := $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name">CREATOR_DIR</span><span class="rainbow-delimiters-depth-1">)</span>  SUBMODULE_PROOFS := $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name">CREATOR_DIR</span><span class="rainbow-delimiters-depth-1">)</span>/Makefile
+
+<span class="makefile-targets"> all</span>: $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name">SUBMODULE_PROOFS</span><span class="rainbow-delimiters-depth-1">)</span>  cp site.config $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name">CREATOR_DIR</span><span class="rainbow-delimiters-depth-1">)</span>  $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name">MAKE</span><span class="rainbow-delimiters-depth-1">)</span> -C $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name">CREATOR_DIR</span><span class="rainbow-delimiters-depth-1">)</span>
+        rebuild  $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name">MAKE</span><span class="rainbow-delimiters-depth-1">)</span> sweep
+
+<span class="makefile-targets"> html_</span><span class="warning">only</span>:  $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name">MAKE</span><span class="rainbow-delimiters-depth-1">)</span> -C $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name">CREATOR_DIR</span><span class="rainbow-delimiters-depth-1">)</span> html_<span class="warning">only</span>
+
+<span class="makefile-targets"> rebuild</span>: all | clean
+
+<span class="makefile-targets">$</span><span class="rainbow-delimiters-depth-1"><span class="makefile-targets">(</span></span><span class="variable-name"><span class="makefile-targets">SUBMODULE_PROOFS</span></span><span class="rainbow-delimiters-depth-1"><span class="makefile-targets">)</span></span>: git submodule update --init --recursive
+
+<span class="makefile-targets">clean</span>: $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name">MAKE</span><span class="rainbow-delimiters-depth-1">)</span> -C $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name">CREATOR_DIR</span><span class="rainbow-delimiters-depth-1">)</span> clean
+
+<span class="makefile-targets">distclean</span>: clean git submodule deinit -f .
+
+<span class="makefile-targets">sweep</span>: $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name">MAKE</span><span class="rainbow-delimiters-depth-1">)</span> -C $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name">CREATOR_DIR</span><span class="rainbow-delimiters-depth-1">)</span> sweep
+</code></pre>
+  </body>
+</html>
