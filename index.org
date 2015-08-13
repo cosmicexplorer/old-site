@@ -22,7 +22,7 @@ var g = new f;
 
 The highlighting of code blocks runs off [[https://highlightjs.org][highlight.js]]. It's interesting to note that all these interconnected pages are actually a single page! Such is the magic of [[https://github.com/cosmicexplorer/org-info-js][org-info.js]] (which I've sprinkled a little extra pizazz on).
 
-Since the site generation is totally static (the generated site doesn't rely on external resources), I'd like to try making it a more generic sort of local documentation generator. But that'll come after I write code that needs documentation.
+Since the site generation is totally static (the generated site doesn't rely on external resources), I'd like to try making it a more generic sort of local documentation generator. But that'll come after I write code that people want documentation for.
 
 ** about me
 
@@ -32,4 +32,4 @@ I'm Danny McClanahan. I [[https://github.com/cosmicexplorer][write code]] and [[
 
 I often find that writing about things is harder for me to do than to actually do them, so this is an attempt to combat that. To search through posts, you can either [[https://github.com/cosmicexplorer/cosmicexplorer.github.io][clone this repo]] or press the =o= key to run occur mode.
 
-** initial reaction
+(no actual posts yet, but it'll happen! trust me!)

@@ -6,67 +6,39 @@
     <style type="text/css">
     <!--
       body {
-        color: #00ff00;
-        background-color: #000000;
+        color: #000000;
+        background-color: #ffffff;
       }
       .comment {
         /* font-lock-comment-face */
         color: #ffffff;
         background-color: #8b008b;
       }
-      .comment-delimiter {
-        /* font-lock-comment-delimiter-face */
-        color: #ffffff;
-        background-color: #8b008b;
-      }
-      .constant {
-        /* font-lock-constant-face */
-        color: #7fffd4;
-      }
-      .keyword {
-        /* font-lock-keyword-face */
-        color: #00ffff;
-      }
-      .org-block-background {
-        /* org-block-background */
-        background-color: #001133;
-      }
-      .org-block-begin-line {
-        /* org-block-begin-line */
-        color: #5555ee;
-        background-color: #333333;
-        text-decoration: underline;
-      }
-      .org-block-end-line {
-        /* org-block-end-line */
-        color: #5555ee;
-        background-color: #333333;
-        text-decoration: overline;
-      }
       .org-document-info {
         /* org-document-info */
-        color: #afeeee;
+        color: #191970;
       }
       .org-document-info-keyword {
         /* org-document-info-keyword */
-        color: #b3b3b3;
+        color: #00ff00;
       }
       .org-document-title {
         /* org-document-title */
-        color: #afeeee;
+        color: #191970;
         font-weight: bold;
       }
       .org-level-1 {
         /* org-level-1 */
-        color: #87cefa;
+        color: #0000ff;
+        font-weight: bold;
       }
       .org-level-2 {
         /* org-level-2 */
-        color: #eedd82;
+        color: #ffff00;
       }
       .org-link {
         /* org-link */
-        color: #00ffff;
+        color: #0000ff;
         text-decoration: underline;
       }
       .org-meta-line {
@@ -76,23 +48,11 @@
       }
       .org-verbatim {
         /* org-verbatim */
-        color: #b3b3b3;
+        color: #00ff00;
       }
       .rainbow-delimiters-depth-1 {
         /* rainbow-delimiters-depth-1-face */
-        color: #8c8c8c;
-      }
-      .string {
-        /* font-lock-string-face */
-        color: #ffa07a;
-      }
-      .type {
-        /* font-lock-type-face */
-        color: #98fb98;
-      }
-      .variable-name {
-        /* font-lock-variable-name-face */
-        color: #eedd82;
+        color: #707183;
       }
 
       a {
@@ -124,24 +84,23 @@
 and doesn't harvest your personal information <span class="rainbow-delimiters-depth-1">(</span>probably<span class="rainbow-delimiters-depth-1">)</span>. The site supports
 org-mode's linking features <span class="rainbow-delimiters-depth-1">(</span>here's <span class="org-link"><a href="test.c.html">file:test.c</a></span> from this repo<span class="rainbow-delimiters-depth-1">)</span>, as well as
 org-babel; here's some inline code:
-<span class="org-block-begin-line"> #+BEGIN_SRC javascript
-</span><span class="org-block-background"> console.log(</span><span class="string"><span class="org-block-background">"hello world!"</span></span><span class="org-block-background">);
+ #+BEGIN_SRC javascript
+ console.log<span class="rainbow-delimiters-depth-1">(</span>"hello world!"<span class="rainbow-delimiters-depth-1">)</span>;
 
-</span><span class="keyword"><span class="org-block-background"> var</span></span><span class="org-block-background"> </span><span class="variable-name"><span class="org-block-background">a</span></span><span class="org-block-background"> = 3; </span><span class="comment-delimiter"><span class="org-block-background">// </span></span><span class="comment"><span class="org-block-background">set a to 3
-</span></span><span class="org-block-background">
-</span><span class="keyword"><span class="org-block-background"> var</span></span><span class="org-block-background"> </span><span class="variable-name"><span class="org-block-background">f</span></span><span class="org-block-background"> = </span><span class="keyword"><span class="org-block-background">function</span></span><span class="org-block-background">(){ </span><span class="constant"><span class="org-block-background"> this</span></span><span class="org-block-background">.x = a;  }
+ var a = 3; // set a to 3
 
-</span><span class="keyword"><span class="org-block-background"> var</span></span><span class="org-block-background"> </span><span class="variable-name"><span class="org-block-background">g</span></span><span class="org-block-background"> = </span><span class="keyword"><span class="org-block-background">new</span></span><span class="org-block-background"> </span><span class="type"><span class="org-block-background">f</span></span><span class="org-block-background">;
-</span><span class="org-block-end-line"> #+END_SRC
-</span>
- The highlighting of code blocks runs off <span class="org-link"><a href="https://highlightjs.org">highlight.js</a></span>. It's interesting to note
+ var f = function<span class="rainbow-delimiters-depth-1">(){</span>  this.x = a; <span class="rainbow-delimiters-depth-1">}</span>
+
+var g = new f; #+END_SRC
+
+The highlighting of code blocks runs off <span class="org-link"><a href="https://highlightjs.org">highlight.js</a></span>. It's interesting to note
 that all these interconnected pages are actually a single page! Such is the
 magic of <span class="org-link"><a href="https://github.com/cosmicexplorer/org-info-js">org-info.js</a></span> <span class="rainbow-delimiters-depth-1">(</span>which I've sprinkled a little extra pizazz on<span class="rainbow-delimiters-depth-1">)</span>.
 
- Since the site generation is totally static <span class="rainbow-delimiters-depth-1">(</span>the generated site doesn't rely on
+Since the site generation is totally static <span class="rainbow-delimiters-depth-1">(</span>the generated site doesn't rely on
 external resources<span class="rainbow-delimiters-depth-1">)</span>, I'd like to try making it a more generic sort of local
-documentation generator. But that'll come after I write code that needs
-documentation.
+documentation generator. But that'll come after I write code that people want
+documentation for.
 
 <span class="org-level-2">** about me</span>
 
@@ -155,7 +114,7 @@ I often find that writing about things is harder for me to do than to actually
 do them, so this is an attempt to combat that. To search through posts, you can
 either <span class="org-link"><a href="https://github.com/cosmicexplorer/cosmicexplorer.github.io">clone this repo</a></span> or press the <span class="org-verbatim">=o=</span> key to run occur mode.
 
-<span class="org-level-2">** initial reaction</span>
+<span class="rainbow-delimiters-depth-1">(</span>no actual posts yet, but it'll happen! trust me!<span class="rainbow-delimiters-depth-1">)</span>
 </code></pre>
   </body>
 </html>
