@@ -2,31 +2,47 @@
 <!-- Created by htmlize-1.47 in css mode. -->
 <html>
   <head>
+  <style type="text/css">
+    <!--
+      pre > code {
+        white-space: -moz-pre-wrap; /* Mozilla */
+        white-space: -hp-pre-wrap; /* HP printers */
+        white-space: -o-pre-wrap; /* Opera 7 */
+        white-space: -pre-wrap; /* Opera 4-6 */
+        white-space: pre-wrap; /* CSS 2.1 */
+      }
+    -->
+  </style>
+
     <title>README.md</title>
     <style type="text/css">
     <!--
       body {
-        color: #000000;
-        background-color: #ffffff;
+        color: #00ff00;
+        background-color: #000000;
+      }
+      .markdown-comment {
+        /* markdown-comment-face */
+        color: #ffffff;
+        background-color: #8b008b;
       }
       .markdown-header-face-1 {
         /* markdown-header-face-1 */
-        color: #0000ff;
+        color: #87cefa;
         font-weight: bold;
       }
       .markdown-header-rule {
         /* markdown-header-rule-face */
-        color: #0000ff;
+        color: #87cefa;
         font-weight: bold;
       }
       .markdown-link {
         /* markdown-link-face */
         color: #00ffff;
-        font-weight: bold;
       }
       .markdown-url {
         /* markdown-url-face */
-        color: #00ff00;
+        color: #ffa07a;
       }
 
       a {
@@ -43,14 +59,13 @@
   </head>
   <body>
     <pre><code>
-<span class="markdown-header-face-1"> &lt;!-- %% This file was generated from <a href="README.md">README.md</a> %% --&gt; cosmicexplorer.github.io</span>
+<span class="markdown-comment"> &lt;!--  %% This file was generated from <a href="README.md">README.md</a> %%  --&gt;</span>
+<span class="markdown-header-face-1">cosmicexplorer.github.io</span>
 <span class="markdown-header-rule"> ========================</span>
 
- Generated using
-<span class="markdown-link">[org-site-creator]</span><span class="markdown-url">(https://github.com/cosmicexplorer/org-site-creator)</span>. View the
-results <span class="markdown-link">[here]</span><span class="markdown-url">(https://cosmicexplorer.github.io)</span>. All the development occurs in
-the <span class="markdown-link">[site]</span><span class="markdown-url">(/github/cosmicexplorer/cosmicexplorer.github.io/tree/site)</span> branch
-because github pages chokes on any type of submodules.
+ Generated using <span class="markdown-link">[org-site-creator]</span><span class="markdown-url">(https://github.com/cosmicexplorer/org-site-creator)</span>. View the results <span class="markdown-link">[here]</span><span class="markdown-url">(https://cosmicexplorer.github.io)</span>.
+
+ All the development occurs in the <span class="markdown-link">[site]</span><span class="markdown-url">(/cosmicexplorer/cosmicexplorer.github.io/tree/site)</span> branch, which is then built in the <span class="markdown-link">[site-built]</span><span class="markdown-url">(/cosmicexplorer/cosmicexplorer.github.io/tree/site-built)</span> branch because github pages is run in jekyll's safe mode, which doesn't allow custom build plugins, and then finally merged to <span class="markdown-link">[master]</span><span class="markdown-url">(/cosmicexplorer/cosmicexplorer.github.io/tree/master)</span>, because github pages chokes on any type of submodules.
 </code></pre>
   </body>
 </html>
