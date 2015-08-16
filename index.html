@@ -15,7 +15,7 @@
     -->
   </style>
 
-<!-- 2015-08-13 Thu 08:34 -->
+<!-- 2015-08-16 Sun 03:59 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="viewport" content="width=device-width, initial-scale=1" />
 <title>passion paradise</title>
@@ -246,7 +246,7 @@ for the JavaScript code in this tag.
 </li>
 <li><a href="#posts">2. posts</a>
 <ul>
-<li><a href="#first-thoughts-on-haskell-2015-08-13">2.1. first thoughts on haskell 2015-08-13</a></li>
+<li><a href="#first-thoughts-on-haskell">2.1. first thoughts on haskell</a></li>
 </ul>
 </li>
 </ul>
@@ -304,14 +304,19 @@ I often find that writing about things is harder for me to do than to actually d
 </div>
 
 <div id="outline-container-orgheadline3" class="outline-3">
-<h3 id="first-thoughts-on-haskell-2015-08-13"><a id="orgheadline3"></a><span class="section-number-3">2.1</span> first thoughts on haskell 2015-08-13</h3>
-<div class="outline-text-3" id="text-first-thoughts-on-haskell-2015-08-13">
+<h3 id="first-thoughts-on-haskell"><a id="orgheadline3"></a><span class="section-number-3">2.1</span> first thoughts on haskell</h3>
+<div class="outline-text-3" id="text-first-thoughts-on-haskell">
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2015-08-13 Thu&gt;</span></span>
+</p>
+
 <p>
 I don't know haskell, so I'm sailing through <a href="http://learnyouahaskell.com/">learn you a haskell for great good</a> (which is fantastic) at a pretty good clip and eventually writing a <a href="https://github.com/cosmicexplorer/haskshell">basic shell interpreter</a>. I had a few thoughts so I decided to write them down.
 </p>
 
 <ul class="org-ul">
 <li>Idiomatic haskell relies on many extremely small, simple, composable functions. On the one hand, this is a good programming practice for most programming languages. On the other hand, this is largely because, unlike lisp, haskell's clean-looking whitespace-heavy syntax makes it extremely difficult to compose functions of any size without extreme application of syntactic sugar (which also makes it much harder to parse).</li>
+<li>Haskell is super hard to parse in your head. The emacs support is fantastic, with extremely rich syntax highlighting; however, I think it would be extremely difficult to parse the syntax in your head without the syntax highlighting. Simpler syntaxes like javascript and lisp can be written without a ton of syntax highlighting extremely easily, and I think haskell by nature is tougher to reason about.</li>
 <li>Curried functions are a cool idea and a great, useful instance of syntactic sugar. Haskell's emphasis on recursion forces most functions into a simple calling style (higher-order/callback function last), which means it's likely the order of the arguments will be correct for currying. However, the syntactic sugar breaks down when the arguments to a function must be switched around; "currying" (which is just a fancy word for making an anonymous function really easily) requires manually making a lambda like lisp or javascript.</li>
 <li>Pattern matching is really great. It:
 <ol class="org-ol">
@@ -322,7 +327,7 @@ I don't know haskell, so I'm sailing through <a href="http://learnyouahaskell.co
 </ol></li>
 <li>I think a good reader macro could accomplish a similar thing as pattern-matching in lisp. <span class="inline-code"><code>destructuring-bind</code></span> is disgustingly verbose and doesn't perform switching. I don't think currying could be implemented as easily, though, outside of a lambda convenience macro.</li>
 <li>Could some forms of pattern matching be performed at compile-time? I suspect not, but I don't like the idea of branching on a pattern match in every iteration of a tight loop, even with tail-recursion.</li>
-<li>Making a language lazy by default in every possible computation is a fantastic idea. I'm not sure I see where it really takes effect yet outside of list recursion (which many other languages (C#, js) have already implemented already), but it seems cool.</li>
+<li>Making a language lazy by default in every possible computation is a fantastic idea. I'm not sure I see where it really takes effect yet outside of list recursion (which many other languages (C#, js) have already implemented), but it seems cool.</li>
 <li>I tried to understand haskell about a year ago (which was about a year after I started programming) and found it hopelessly confusing. After a year of emacs (with some common lisp here and there), I find it extremely easy to understand most of this tutorial, even the "more complex" functional programming parts.</li>
 <li>ghc's error messages are understandable after a bit of practice but unnecessarily cryptic. If it's more useful for compiler writers to have more precise error messages, then they should have a special switch that turns on raw core dumps instead of errors and give regular users some more help.</li>
 <li>If you have to use types in a high-level language (hint: you don't, although haskell does a pretty good job), you need type inference. I didn't believe this before learning haskell, but it would be absolutely impossible to write code without it.</li>
@@ -349,7 +354,7 @@ Anchor up?!
 </div>
 </div>
 <div id="postamble" class="status">
-<table><tr><td class="author">Danny McClanahan</td><td class="source"><a href="index.org.html">See Org Source</a></td><td class="date">Date: 2015-08-13@08:34:42</td></tr><tr><td class="email"><a class="format_eval">(format "%s@%s.com" "danieldmcclanahan" "gmail")</a></td><td></td><td class="creator"><a href="http://gnu.org/software/emacs/">Emacs</a> 25.0.50.2, <a href="http://orgmode.org">Org</a> 8.2.10</td></tr></table>
+<table><tr><td class="author">Danny McClanahan</td><td class="source"><a href="index.org.html">See Org Source</a></td><td class="date">Date: 2015-08-16@03:59:18</td></tr><tr><td class="email"><a class="format_eval">(format "%s@%s.com" "danieldmcclanahan" "gmail")</a></td><td></td><td class="creator"><a href="http://gnu.org/software/emacs/">Emacs</a> 25.0.50.2, <a href="http://orgmode.org">Org</a> 8.2.10</td></tr></table>
 </div>
 </body>
 </html>
