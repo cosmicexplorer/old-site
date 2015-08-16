@@ -60,6 +60,11 @@
         /* org-code */
         color: #b3b3b3;
       }
+      .org-date {
+        /* org-date */
+        color: #a020f0;
+        text-decoration: underline;
+      }
       .org-document-info {
         /* org-document-info */
         color: #191970;
@@ -165,11 +170,14 @@ I'm Danny McClanahan. I <span class="org-link"><a href="https://github.com/cosmi
 
 I often find that writing about things is harder for me to do than to actually do them, so this is an attempt to combat that. To search through all posts, you can either <span class="org-link"><a href="https://github.com/cosmicexplorer/cosmicexplorer.github.io">clone this repo</a></span> or press the <span class="org-verbatim">=o=</span> key to run occur mode. You can always use your browser's text search tool to search the current post.
 
-<span class="org-level-2">** first thoughts on haskell 2015-08-13</span>
+<span class="org-level-2">** first thoughts on haskell</span>
+
+<span class="org-date">&lt;2015-08-13&gt;</span>
 
 I don't know haskell, so I'm sailing through <span class="org-link"><a href="http://learnyouahaskell.com">learn you a haskell for great good</a></span> <span class="rainbow-delimiters-depth-1">(</span>which is fantastic<span class="rainbow-delimiters-depth-1">)</span> at a pretty good clip and eventually writing a <span class="org-link"><a href="https://github.com/cosmicexplorer/haskshell">basic shell interpreter</a></span>. I had a few thoughts so I decided to write them down.
 
 - Idiomatic haskell relies on many extremely small, simple, composable functions. On the one hand, this is a good programming practice for most programming languages. On the other hand, this is largely because, unlike lisp, haskell's clean-looking whitespace-heavy syntax makes it extremely difficult to compose functions of any size without extreme application of syntactic sugar <span class="rainbow-delimiters-depth-1">(</span>which also makes it much harder to parse<span class="rainbow-delimiters-depth-1">)</span>.
+- Haskell is super hard to parse in your head. The emacs support is fantastic, with extremely rich syntax highlighting; however, I think it would be extremely difficult to parse the syntax in your head without the syntax highlighting. Simpler syntaxes like javascript and lisp can be written without a ton of syntax highlighting extremely easily, and I think haskell by nature is tougher to reason about.
 - Curried functions are a cool idea and a great, useful instance of syntactic sugar. Haskell's emphasis on recursion forces most functions into a simple calling style <span class="rainbow-delimiters-depth-1">(</span>higher-order/callback function last<span class="rainbow-delimiters-depth-1">)</span>, which means it's likely the order of the arguments will be correct for currying. However, the syntactic sugar breaks down when the arguments to a function must be switched around; "currying" <span class="rainbow-delimiters-depth-1">(</span>which is just a fancy word for making an anonymous function really easily<span class="rainbow-delimiters-depth-1">)</span> requires manually making a lambda like lisp or javascript.
 - Pattern matching is really great. It:
   1. makes a decision tree based on the structure of one or more arguments
@@ -178,7 +186,7 @@ I don't know haskell, so I'm sailing through <span class="org-link"><a href="htt
   4. does this with an extremely minimal amount of syntax.
 - I think a good reader macro could accomplish a similar thing as pattern-matching in lisp. <span class="org-code">~destructuring-bind~</span> is disgustingly verbose and doesn't perform switching. I don't think currying could be implemented as easily, though, outside of a lambda convenience macro.
 - Could some forms of pattern matching be performed at compile-time? I suspect not, but I don't like the idea of branching on a pattern match in every iteration of a tight loop, even with tail-recursion.
-- Making a language lazy by default in every possible computation is a fantastic idea. I'm not sure I see where it really takes effect yet outside of list recursion <span class="rainbow-delimiters-depth-1">(</span>which many other languages <span class="rainbow-delimiters-depth-2">(</span>C#, js<span class="rainbow-delimiters-depth-2">)</span> have already implemented already<span class="rainbow-delimiters-depth-1">)</span>, but it seems cool.
+- Making a language lazy by default in every possible computation is a fantastic idea. I'm not sure I see where it really takes effect yet outside of list recursion <span class="rainbow-delimiters-depth-1">(</span>which many other languages <span class="rainbow-delimiters-depth-2">(</span>C#, js<span class="rainbow-delimiters-depth-2">)</span> have already implemented<span class="rainbow-delimiters-depth-1">)</span>, but it seems cool.
 - I tried to understand haskell about a year ago <span class="rainbow-delimiters-depth-1">(</span>which was about a year after I started programming<span class="rainbow-delimiters-depth-1">)</span> and found it hopelessly confusing. After a year of emacs <span class="rainbow-delimiters-depth-1">(</span>with some common lisp here and there<span class="rainbow-delimiters-depth-1">)</span>, I find it extremely easy to understand most of this tutorial, even the "more complex" functional programming parts.
 - ghc's error messages are understandable after a bit of practice but unnecessarily cryptic. If it's more useful for compiler writers to have more precise error messages, then they should have a special switch that turns on raw core dumps instead of errors and give regular users some more help.
 - If you have to use types in a high-level language <span class="rainbow-delimiters-depth-1">(</span>hint: you don't, although haskell does a pretty good job<span class="rainbow-delimiters-depth-1">)</span>, you need type inference. I didn't believe this before learning haskell, but it would be absolutely impossible to write code without it.
