@@ -81,13 +81,13 @@
 
 <span class="makefile-targets"> rebuild</span>: all | clean
 
-<span class="makefile-targets"> $</span><span class="rainbow-delimiters-depth-1"><span class="makefile-targets">(</span></span><span class="variable-name"><span class="makefile-targets">SUBMODULE_PROOFS</span></span><span class="rainbow-delimiters-depth-1"><span class="makefile-targets">)</span></span>:
+<span class="makefile-targets">$</span><span class="rainbow-delimiters-depth-1"><span class="makefile-targets">(</span></span><span class="variable-name"><span class="makefile-targets">SUBMODULE_PROOFS</span></span><span class="rainbow-delimiters-depth-1"><span class="makefile-targets">)</span></span>:
         git submodule update --init --recursive
 
-<span class="makefile-targets"> clean</span>:
+<span class="makefile-targets">clean</span>:
         $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name">MAKE</span><span class="rainbow-delimiters-depth-1">)</span> -C $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name">CREATOR_DIR</span><span class="rainbow-delimiters-depth-1">)</span> clean
 
-<span class="makefile-targets"> distclean</span>: clean
+<span class="makefile-targets">distclean</span>: clean
         git submodule deinit -f .
 
 <span class="makefile-targets">sweep</span>:
