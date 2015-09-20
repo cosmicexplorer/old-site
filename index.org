@@ -1,5 +1,5 @@
 #+STARTUP: showeverything
-#+TITLE: passion paradise
+#+TITLE: check out my github
 #+AUTHOR: Danny McClanahan
 #+EMAIL: (format "%s@%s.com" "danieldmcclanahan" "gmail")
 
