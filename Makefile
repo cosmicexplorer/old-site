@@ -17,6 +17,7 @@ rebuild: all | clean
 
 $(SUBMODULE_PROOFS):
 	git submodule update --init --recursive
+	git submodule foreach git pull origin master
 
 clean:
 	$(MAKE) -C $(CREATOR_DIR) clean
