@@ -81,7 +81,7 @@
   <body>
     <pre><code>
 <span class="comment-delimiter"> # </span><span class="comment">%% This file was generated from <a href="Makefile">Makefile</a> %%
-</span><span class="makefile-targets">.PHONY</span>: all rebuild clean distclean sweep html_<span class="warning">only</span>
+</span><span class="makefile-targets">.PHONY</span>: all rebuild clean distclean sweep html_<span class="warning">only</span> js_<span class="warning">only</span>
 <span class="variable-name"> CREATOR_DIR</span> := org-site-creator
 <span class="variable-name"> SUBMODULES</span> := $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name">CREATOR_DIR</span><span class="rainbow-delimiters-depth-1">)</span>
 <span class="variable-name"> SUBMODULE_PROOFS</span> := $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name">CREATOR_DIR</span><span class="rainbow-delimiters-depth-1">)</span>/Makefile
@@ -91,13 +91,18 @@
         $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name">MAKE</span><span class="rainbow-delimiters-depth-1">)</span> sweep
 <span class="makefile-targets"> html_</span><span class="warning">only</span>:
         $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name">MAKE</span><span class="rainbow-delimiters-depth-1">)</span> -C $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name">CREATOR_DIR</span><span class="rainbow-delimiters-depth-1">)</span> html_<span class="warning">only</span>
+<span class="makefile-targets"> js_</span><span class="warning">only</span>:
+        $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name">MAKE</span><span class="rainbow-delimiters-depth-1">)</span> -C $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name">CREATOR_DIR</span><span class="rainbow-delimiters-depth-1">)</span> js_<span class="warning">only</span>
 <span class="makefile-targets"> rebuild</span>: all | clean
 <span class="makefile-targets"> $</span><span class="rainbow-delimiters-depth-1"><span class="makefile-targets">(</span></span><span class="variable-name"><span class="makefile-targets">SUBMODULE_PROOFS</span></span><span class="rainbow-delimiters-depth-1"><span class="makefile-targets">)</span></span>:
         git submodule update --init --recursive
+        git submodule foreach git pull origin master
 <span class="makefile-targets"> clean</span>:
         $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name">MAKE</span><span class="rainbow-delimiters-depth-1">)</span> -C $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name">CREATOR_DIR</span><span class="rainbow-delimiters-depth-1">)</span> clean
-<span class="makefile-targets"> distclean</span>: clean
+
+<span class="makefile-targets">distclean</span>: clean
         git submodule deinit -f .
+
 <span class="makefile-targets">sweep</span>:
         $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name">MAKE</span><span class="rainbow-delimiters-depth-1">)</span> -C $<span class="rainbow-delimiters-depth-1">(</span><span class="variable-name">CREATOR_DIR</span><span class="rainbow-delimiters-depth-1">)</span> sweep
 </code></pre>
