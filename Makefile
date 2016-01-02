@@ -1,4 +1,4 @@
-.PHONY: all rebuild clean distclean sweep html_only
+.PHONY: all rebuild clean distclean sweep html_only js_only
 
 CREATOR_DIR := org-site-creator
 
@@ -12,6 +12,9 @@ all: $(SUBMODULE_PROOFS)
 
 html_only:
 	$(MAKE) -C $(CREATOR_DIR) html_only
+
+js_only:
+	$(MAKE) -C $(CREATOR_DIR) js_only
 
 rebuild: all | clean
 
